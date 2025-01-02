@@ -41,7 +41,7 @@ public class SAMLServiceProviderPersistenceManagerFactory {
         if (StringUtils.isNotBlank(SAML_STORAGE_TYPE)) {
             switch (SAML_STORAGE_TYPE) {
                 case HYBRID:
-                    // Initialize Hybrid SAML storage.
+                    samlSSOServiceProviderDAO = new HybridSAMLSSOServiceProviderDAOImpl();
                     LOG.info("Hybrid SAML storage initialized.");
                     break;
                 case REGISTRY:
